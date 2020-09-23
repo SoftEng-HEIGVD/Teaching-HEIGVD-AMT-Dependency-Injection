@@ -1,16 +1,23 @@
 package ch.heigvd.amt.fishing;
 
-import ch.heigvd.amt.fishing.equipment.Bait;
-import ch.heigvd.amt.fishing.equipment.Boat;
-import ch.heigvd.amt.fishing.equipment.Boots;
-import ch.heigvd.amt.fishing.equipment.FishingRod;
+import ch.heigvd.amt.fishing.equipment.api.IBoat;
+import ch.heigvd.amt.fishing.equipment.api.IBait;
+import ch.heigvd.amt.fishing.equipment.api.IBoots;
+import ch.heigvd.amt.fishing.equipment.api.IFishingRod;
 
 public class Fisherman {
 
-  private Boots boots;
-  private FishingRod fishingRod;
-  private Bait bait;
-  private Boat boat;
+  private IBoots boots;
+  private IFishingRod fishingRod;
+  private IBait bait;
+  private IBoat boat;
+
+  public Fisherman(IBoat boat, IBoots boots, IBait bait, IFishingRod fishingRod) {
+    this.boat = boat;
+    this.boots = boots;
+    this.bait = bait;
+    this.fishingRod = fishingRod;
+  }
 
   public Fish goGetFish() {
     boots.wear();

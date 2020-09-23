@@ -11,8 +11,5 @@ public class App
 {
     public static void main( String[] args )
     {
-        Fisherman fisherman = new Fisherman();
-        Fish meal = fisherman.goGetFish();
-        meal.eat();
     }
 }
