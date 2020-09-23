@@ -7,10 +7,10 @@ import ch.heigvd.amt.fishing.equipment.FishingRod;
 
 public class Fisherman {
 
-  private Boots boots;
-  private FishingRod fishingRod;
-  private Bait bait;
-  private Boat boat;
+  private Boots boots = new Boots();
+  private FishingRod fishingRod = new FishingRod();
+  private Bait bait = new Bait();
+  private Boat boat = new Boat();
 
   public Fish goGetFish() {
     boots.wear();
